@@ -47,12 +47,27 @@ npm install -D prettier prettier-plugin-tailwindcss
 
 ```javascript
 module.exports = {
-  plugins: ["prettier-plugin-tailwindcss"],
+  plugins: ['prettier-plugin-tailwindcss'],
   singleQuote: true,
 };
 ```
 
 7. If you encounter any errors, you might need to add `//eslint-disable-next-line` to bypass ESLint errors.
+
+8.Tailwind config
+
+```/** @type {import('tailwindcss').Config} */
+export default {
+  content: [
+    "./index.html",
+    "./src/**/*.{js,ts,jsx,tsx}",
+  ],
+  theme: {
+    extend: {},
+  },
+  plugins: [],
+}
+```
 
 ## Setting up Prettier with Tailwind CSS
 
@@ -70,7 +85,7 @@ Create a Prettier configuration file named `Prettier.config.cjs` in the root of 
 
 ```javascript
 module.exports = {
-  plugins: ["prettier-plugin-tailwindcss"],
+  plugins: ['prettier-plugin-tailwindcss'],
   singleQuote: true,
 };
 ```
